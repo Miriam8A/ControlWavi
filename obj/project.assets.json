@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\Alexander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\tareas de Arleth\\ProyectoFinal\\ControlWavi\\ControlWavi.csproj",
+      "projectUniqueName": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
       "projectName": "ControlWavi",
-      "projectPath": "E:\\tareas de Arleth\\ProyectoFinal\\ControlWavi\\ControlWavi.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "E:\\tareas de Arleth\\ProyectoFinal\\ControlWavi\\obj\\",
+      "projectPath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
+      "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -53,6 +53,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.15, 5.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -61,7 +79,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

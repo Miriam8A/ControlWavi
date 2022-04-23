@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TWU2JauqP8VmFRCjvKF+VhNXey0I+7cnSC7cJXY1DmfE67O9aHvv+iqeIwOUkqfyHINqZ3riK0f6R0utyz0KWQ==",
+  "dgSpecHash": "UjcGqlAzusERcLIHLLcRhTpc+REwFVzA3mW4ST4BZ5TqCbrX9nHCTjuQyVfPw0yHxs6monVWiGoq/xjvqNmywg==",
   "success": true,
-  "projectFilePath": "E:\\tareas de Arleth\\ProyectoFinal\\ControlWavi\\ControlWavi.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexander\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Alexander\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Alexander\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Alexander\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
