@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj": {}
+    "C:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj": {
+    "C:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
+        "projectUniqueName": "C:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
         "projectName": "ControlWavi",
-        "projectPath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
+        "projectPath": "C:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\ControlWavi.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\obj\\",
+        "outputPath": "C:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,38 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -47,24 +77,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.15, 5.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
