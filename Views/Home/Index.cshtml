@@ -1,35 +1,85 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
+
 <header>
 <div class="text-center">
-    <h1 class="display-4">Bienvenidos</h1>
+    <meta charset="UTF-8">
+    <h1 class="display-4"></h1>
     <link rel="stylesheet" href="css/site.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </div>
 </header>
 
 <body>
-  
-    <footer>
+
+<div class="container">
+  <h2>CONSOLAS DE PLAY</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://img.clasf.pe/2020/02/27/Ps2-Juegos-Play2-Digitales-20200227091932.2260720015.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="https://m.media-amazon.com/images/I/61TJc1o5VgS._AC_SL1000_.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="https://img.clasf.pe/2019/10/05/Ps4-Pro-1tb-Nueva-En-Caja-Con-Garanta-20191005150646.7226290015.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+
+
+    <footer >
         <div class="container-footer-all">
         <div class="container-body">
             <div class="columna1">
-                  <a href="https://localhost:5001/Home/Privacy">SOBRE NOSOTROS</a>
+                  <a href="https://localhost:5001/Home/Privacy">SOBRE NOSOTROS:</a>
                   
             </div>
             <div class="columna2">
                 <h1>REDES SOCIALES:</h1>
                 <div class="row">
-                    <img src="/imagen/facebook.jpg"  alt="">
+                  <a href="https://www.facebook.com/ControlWavi"><img src="/imagen/facebook.jpg"  alt="facebook"></a>  
                     <label>Siguenos en facebook</label>
                 </div>
                 <div class="row">
-                    <img src="/imagen/instagran.jpg" alt="">
+                    <img src="/imagen/instagran.jpg" alt="instagran">
                     <label>Siguenos en instagran</label>
                 </div>
                 <div class="row">
-                    <img src="/imagen/Twitter.jpg"  alt="">
+                    <img src="/imagen/Twitter.jpg"  alt="Twitter">
                     <label>Siguenos en twitter</label>
                 </div>
                 
@@ -37,27 +87,20 @@
             <div class="columna3">
                 <h1>INFORMACION DE CONTACTO:</h1>
                 <div class="row2">
-                 <img src="/imagen/casa.jpg" alt="">
+                 <img src="/imagen/casa.jpg" alt="casa">
                  <label>Av.Brazil 120, Lima Perú</label>
                 </div>
                 <div class="row2">
-                 <img src="/imagen/whatsapp2.jpg" alt="">
+                 <a href="https://chat.whatsapp.com/KZqjWlFdMwyC7SXipGDq4j"><img src="/imagen/whatsapp2.jpg" alt="whatsapp2"></a>
                  <label>+51 946658835</label>
                 </div>
                 <div class="row2">
-                 <img src="/imagen/correo.jpg"  alt="">
-                 <label>alexa@gmail.com</label>
+                 <img src="/imagen/correo.jpg"  alt="correo">
+                 <label>alexander@gmail.com</label>
                 </div>
             </div>
         </div>
      </div>
-     <div class="container-footer">
-         <div class="footer">
-            <div class="copyright">
-                &copy; 2022 Todos los derechos Reservados | 
-                <a href="#">CONTROL WAVI</a>
-            </div>
-         </div>
-        </div>
+     
     </footer>
 </body>

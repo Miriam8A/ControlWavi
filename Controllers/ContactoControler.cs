@@ -2,11 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using ControlWavi.Models;
 
 namespace ControlWavi.Controllers
 {
-    public class ContactoControler
+    public class ContactoController: Controller
     {
         
+
+      
+
+
     }
 }

@@ -61,8 +61,17 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
- 
 }
+
+body{
+  background-image: url("/imagen/ControlWavibazar.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -197,4 +206,8 @@ body {
   .columna3{
     margin-top: 40px;
   }
+
+
+
+
 }

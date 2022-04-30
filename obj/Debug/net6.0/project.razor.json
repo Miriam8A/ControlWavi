@@ -16318,6 +16318,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\Views\\Contacto\\Index.cshtml",
+      "TargetPath": "Views\\Contacto\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Alexander\\Documents\\AVANCES DEL TRABAJO DE GRUPO DE PROGRAMACIÓN 1\\ControlWavi\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
