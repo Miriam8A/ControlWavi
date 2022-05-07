@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tuqak8ESy71WG8FKigIyso38Mdxe9DqnBYwIpk6DbqI9Wb+hpiFsHn3VwZYtOJ8x4Xfaxy7xRU0iLLrbsQAs1A==",
+  "dgSpecHash": "Y1LMy8OZ2H1+IRYPFC7E7k0EwfDfKwpXw1rKwtJCqsmtC5LCWrnRgMTPESe+A0an4xLg/o8AfSgU/JDsEQ+42g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj",
+  "projectFilePath": "C:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexander\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Alexander\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

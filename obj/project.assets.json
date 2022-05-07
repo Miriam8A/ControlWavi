@@ -10208,11 +10208,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj",
+      "projectUniqueName": "c:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj",
       "projectName": "ControlWavi",
-      "projectPath": "c:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj",
+      "projectPath": "c:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj",
       "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\obj\\",
+      "outputPath": "c:\\Users\\Alexander\\grupo progra\\ControlWavi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config"

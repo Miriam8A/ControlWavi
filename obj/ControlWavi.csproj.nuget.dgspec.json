@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj": {}
+    "C:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj": {
+    "C:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj",
+        "projectUniqueName": "C:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj",
         "projectName": "ControlWavi",
-        "projectPath": "C:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\ControlWavi.csproj",
+        "projectPath": "C:\\Users\\Alexander\\grupo progra\\ControlWavi\\ControlWavi.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexander\\Documents\\PROGRMACION1 TRABAJO GRUPAL VERSION 2\\ControlWavi\\obj\\",
+        "outputPath": "C:\\Users\\Alexander\\grupo progra\\ControlWavi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config"
