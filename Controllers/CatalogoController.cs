@@ -24,6 +24,18 @@ namespace ControlWavi.Controllers
         {
             return View();
         }
+          public IActionResult Consolas_PlayStation()
+        {
+            return View();
+        }
+          public IActionResult Consolas_Sega()
+        {
+            return View();
+        }
+          public IActionResult Consolas_Xbox()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
