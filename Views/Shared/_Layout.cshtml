@@ -31,10 +31,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index_catalogo">Catálogo</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Consolas_Nintendo">Nintendo</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Consolas_PlayStation">PlayStation</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Consolas_Sega">Sega</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Consolas_Xbox">Xbox</a>
                         </li>                                                 
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contacto" asp-action="Index">Contáctenos</a>
@@ -46,17 +42,16 @@
         </nav>
     </header>
     <div>
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
-
-    <footer>
-        <div class="container" align="center">
-            &copy; 2022 - ControlWavi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white" style="background-color: #131720; ">
+        © 2022 - ControlWavi - <a class="text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
     
+    <!-- Copyright -->
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
