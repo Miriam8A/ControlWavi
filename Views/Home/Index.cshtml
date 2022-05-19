@@ -2,8 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-<header>
-</header>
 <body>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->   
@@ -20,6 +18,9 @@
           <div class="carousel-item">
             <img src="/imagen/ps5-2.jpeg" class="d-block w-100" alt="...">
           </div>
+          <div class="carousel-item">
+            <img src="/imagen/ps3-3.webp" class="d-block w-100" alt="...">
+          </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,46 +32,48 @@
         </button>
     </div>
   </div>
-  <footer>
-      <div class="container-footer-all">
-      <div class="container-body">
-          <div class="columna1">
-                <a href="https://localhost:5001/Home/Privacy">SOBRE NOSOTROS:</a>
-                
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white" style="background-color: #1c2331;">
+      <!-- Section: Links  -->
+      <section class="">
+      <div class="container text-center text-md-start">
+          <!-- Grid row -->
+          <div class="row pt-5 m-0">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold"><a href="https://localhost:5001/Home/Privacy" class="text-white text-decoration-none">Sobre Nosotros</a></h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p> En esta web encontrarás las mejores consolas del mercado a un precio justo. Solo escríbenos al whatsapp y te atenderemos de inmediato.
+                  </p>
+              </div>
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold">Redes Sociales</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+                  <p><a href="https://www.facebook.com/ControlWavi" class="text-white"><i class="bi bi-facebook" alt="facebook"></i></a> Síguenos en facebook</p>
+                  <p><a href="#!" class="text-white"><i class="bi bi-instagram"></i></a> Síguenos en instagram</p>
+                  <p><a href="#!" class="text-white"><i class="bi bi-twitter"></i></a> Síguenos en twitter</p>
+              </div>
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold">Información de Contacto</h6>
+                  <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 60px; background-color: #7c4dff; height: 2px"
+                      />
+                  <p><i class="bi bi-house-door-fill"></i> Av.Brazil 120, Lima Perú</p>
+                  <p><i class="bi bi-envelope-fill"></i> alexander@gmail.com</p>
+                  <p><i class="bi bi-telephone-fill"></i> + 51 946 658 835</p>
+              </div>
+              <!-- Grid column -->
           </div>
-          <div class="columna2">
-              <h1>REDES SOCIALES:</h1>
-              <div class="row">
-                <a href="https://www.facebook.com/ControlWavi"><img src="/imagen/facebook.jpg"  alt="facebook"></a>  
-                  <label>Siguenos en facebook</label>
-              </div>
-              <div class="row">
-                  <img src="/imagen/instagran.jpg" alt="instagran">
-                  <label>Siguenos en instagran</label>
-              </div>
-              <div class="row">
-                  <img src="/imagen/Twitter.jpg"  alt="Twitter">
-                  <label>Siguenos en twitter</label>
-              </div>
-              
-          </div>
-          <div class="columna3">
-              <h1>INFORMACION DE CONTACTO:</h1>
-              <div class="row2">
-                <img src="/imagen/casa.jpg" alt="casa">
-                <label>Av.Brazil 120, Lima Perú</label>
-              </div>
-              <div class="row2">
-                <a href="https://chat.whatsapp.com/KZqjWlFdMwyC7SXipGDq4j"><img src="/imagen/whatsapp2.jpg" alt="whatsapp2"></a>
-                <label>+51 946658835</label>
-              </div>
-              <div class="row2">
-                <img src="/imagen/correo.jpg"  alt="correo">
-                <label>alexander@gmail.com</label>
-              </div>
-          </div>
+          <!-- Grid row -->
       </div>
-    </div>
-    
+      </section>
+      <!-- Section: Links  -->
   </footer>
+  <!-- Footer -->
 </body>
