@@ -5,41 +5,40 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-
-<div class="row">
-    <div class="col-md-4">
+<div class="px-4 py-5 my-5">
+    <div class="col-md-4 mx-auto">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2 style="color:white;">Crear Cuenta</h2>
+            <h2 class="display-6 fw-bold">Crear Cuenta</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-floating">
+            <div class="col mb-3">
+                <label asp-for="Input.Email" class="form-label">Correo</label>
                 <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                <label asp-for="Input.Email"></label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
-            <div class="form-floating">
+            <div class="col mb-3">
+                <label asp-for="Input.Password" class="form-label">Contraseña</label>
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.Password"></label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
-            <div class="form-floating">
+            <div class="col mb-3">
+                <label asp-for="Input.ConfirmPassword" class="form-label">Confirmar Contraseña</label>
                 <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-md-4 mx-auto mt-3">
         <section>
-            <h3 style="color:white;">Bienvenido nuevo cliente </h3> &#129321;
+            <h3 align="center">Bienvenido nuevo cliente &#129321;</h3> 
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
                     <div align="center">
-                        <p style="color:white;">
-                            Al registrarse con nosotros podrá conocer a cerca de nuestras ofertas y promociones exclusivas.<br>
+                        <p>
+                            Al registrarse con nosotros podrá conocer a cerca de nuestras ofertas y promociones exclusivas.
                             Al hacerlo esta de acuerdo con nuestros términos y condiciones 
                         </p>
                     </div>
@@ -61,7 +60,6 @@
         </section>
     </div>
 </div>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
