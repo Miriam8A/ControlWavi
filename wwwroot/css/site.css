@@ -118,11 +118,27 @@ footer{
   margin-top: 20px;
   display: flex;
 }
-.row img{
-  width: 35px;
-  height: 36px;
+.produto img{
+  width: 200px;
 }
+.produto{
+  padding: 2em !important;
+  background-color: #f0f8ff;
+  border-radius: 3em;
+  margin: 1em;
+}
+.produto__price{
 
+}
+produto__title{
+
+}
+.productDescription{
+  padding: 1em;
+}
+.productDescription .btn{
+  margin-top: 1em;
+}
 .row label{
   margin-top: 10px;
   margin-left: 20px;
