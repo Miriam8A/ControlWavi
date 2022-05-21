@@ -32,6 +32,7 @@ namespace ControlWavi.Controllers
         }
 
         public async Task<IActionResult> Index(){
+            var producto  = Util.SessionExtensions.Get<Producto>(HttpContext.Session,"Producto");
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataProforma select o;
             items = items.

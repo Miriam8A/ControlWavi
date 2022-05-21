@@ -19,6 +19,12 @@ namespace ControlWavi.Data;
         public DbSet<ControlWavi.Models.Producto> DataProductos { get; set; } 
     
         public DbSet<ControlWavi.Models.Proforma> DataProforma { get; set; }
+
+        public DbSet<ControlWavi.Models.Pago> DataPago { get; set; }
+
+        public DbSet<ControlWavi.Models.Pedido> DataPedido { get; set; }
+
+         public DbSet<ControlWavi.Models.DetallePedido> DataDetallePedido { get; set; }
     }
 
     
