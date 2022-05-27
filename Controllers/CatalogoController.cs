@@ -31,7 +31,7 @@ namespace ControlWavi.Controllers
 
             }
             
-        public IActionResult Index_catalogo()
+        /*public IActionResult Index_catalogo()
         {
             return View();
         }
@@ -51,7 +51,7 @@ namespace ControlWavi.Controllers
           public IActionResult Consolas_Xbox()
         {
             return View();
-        }
+        }*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
