@@ -11,7 +11,7 @@ namespace ControlWavi.Controllers.Rest
 {
     [ApiController]
     [Route("api/producto")]
-    public class ProductoRestController
+    public class ProductoRestController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
