@@ -7,82 +7,24 @@
   <main class="mainDestacados">
       <div class="containerProdutos mt-5">
         <div class="row">
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\NES.png" alt="NES" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Nintendo NES</h3>
-                <span class="produto__price">S/ 300.00</span>
-                <br>
-                <a class="btn btn-primary" asp-action="Add" asp-route-id="1">Add</a>
-                <a class="btn btn-info" asp-action="Details" asp-route-id="1">View</a>
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="96" height="150"
+                       src="@item.ImageName" alt="@item.ImageName"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                  <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
+                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-                <img src="\Images\SNES.png" alt="SuperNintendo" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Super Nintendo</h3>
-                <span class="produto__price">S/ 350.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\N64.png" alt="Nintendo 64" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Nintendo 64</h3>
-                <span class="produto__price">S/ 450.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\GameCube.png" alt="GameCube" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Nintendo GameCube</h3>
-                <span class="produto__price">S/ 500.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="produto"> 
-              <img src="\Images\Wii.png" alt="Wii" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Nintendo Wii</h3>
-                <span class="produto__price">S/ 350.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-                <img src="\Images\Wii_U.png" alt="Wii_U" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Wii U</h3>
-                <spam class="produto__price">S/ 500.00</spam>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-              <br>
-              <br>
-            </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-                <img src="\Images\Switch.png" alt="Switch" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">Nintendo Switch</h3>
-                <spam class="produto__price">S/ 700.00</spam>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
+            }
         </div>
       </div>      
   </main>
