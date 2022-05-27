@@ -36,9 +36,18 @@ namespace ControlWavi.Controllers
             return View();
         }
 
-        public IActionResult Consolas_Nintendo()
+        public IActionResult Consolas_Nintendo(string? searchString)
         {
-            return View();
+            var productos = from o in _context.DataProductos select o;
+                //SELECT * FROM t_productos -> &
+            if(!String.IsNullOrEmpty(searchString)){
+                productos = productos.Where(s => s.Name.Contains(searchString)); //Algebra de bool
+                // & + WHERE name like '%ABC%'
+            }
+            productos = productos.Where(s => s.Status.Contains("Activo"));
+
+            return View(await productos.ToListAsync());
+            
         }
           public IActionResult Consolas_PlayStation()
         {
