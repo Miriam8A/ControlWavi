@@ -36,7 +36,7 @@ namespace ControlWavi.Controllers
             return View();
         }
 
-        public IActionResult Consolas_Nintendo(string? searchString)
+        public async IActionResult Consolas_Nintendo(string? searchString)
         {
             var productos = from o in _context.DataProductos select o;
                 //SELECT * FROM t_productos -> &
