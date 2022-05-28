@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ControlWavi.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
-
+using ControlWavi.Integration.Sengrid;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -32,6 +32,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+builder.Services.AddSingleton<SendMailIntegration>();
 
 var app = builder.Build();
 

@@ -1,0 +1,42 @@
+GET https://localhost:7289/api/producto HTTP/1.1
+Accept: application/json
+
+GET https://localhost:7289/api/producto/6 HTTP/1.1
+Accept: application/json
+
+POST https://localhost:7289/api/producto HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+
+
+POST https://api.sendgrid.com/v3/mail/send HTTP/1.1
+Authorization: Bearer <TOKEN>
+Content-Type: application/json
+
+{
+  "categories": [
+    "demo"
+  ],
+  "from": {
+    "email": "admin@hotmail.com", //correo origen  settings\sender authentification
+    "name": "Mail Service"
+  },
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "amkerry000@gmail.com", //correo destino variable
+          "name": "Admin"
+        }
+      ],
+      "subject": "Hola"
+    }
+  ],
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "Hola ahora ya uso sendgrid!"
+    }
+  ],
+}
