@@ -36,30 +36,22 @@ namespace ControlWavi.Controllers
             return View();
         }
 
-        public async IActionResult Consolas_Nintendo(string? searchString)
+       public async Task<IActionResult> Consolas_Nintendo()
         {
-            var productos = from o in _context.DataProductos select o;
-                //SELECT * FROM t_productos -> &
-            if(!String.IsNullOrEmpty(searchString)){
-                productos = productos.Where(s => s.Name.Contains(searchString)); //Algebra de bool
-                // & + WHERE name like '%ABC%'
-            }
-            productos = productos.Where(s => s.Status.Contains("Activo"));
-
-            return View(await productos.ToListAsync());
+            return View(await _context.DataProductos.ToListAsync());
             
         }
-          public IActionResult Consolas_PlayStation()
+          public async Task<IActionResult> Consolas_PlayStation()
         {
-            return View();
+            return View(await _context.DataProductos.ToListAsync());
         }
-          public IActionResult Consolas_Sega()
+          public async Task<IActionResult> Consolas_Sega()
         {
-            return View();
+            return View(await _context.DataProductos.ToListAsync());
         }
-          public IActionResult Consolas_Xbox()
+          public async Task<IActionResult> Consolas_Xbox()
         {
-            return View();
+            return View(await _context.DataProductos.ToListAsync());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -95,7 +87,7 @@ namespace ControlWavi.Controllers
             if(userID == null){
                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
                 List<Producto> productos = new List<Producto>();
-                return  View("Index",productos);
+                return  View("Index_catalogo",productos);
             }else{
                 var producto = await _context.DataProductos.FindAsync(id);
 
@@ -108,8 +100,9 @@ namespace ControlWavi.Controllers
                 proforma.UserID = userID;
                 _context.Add(proforma);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index_catalogo));
             }
 
+        }
     }
-    }}
+}

@@ -1,3 +1,4 @@
+@model IEnumerable<ControlWavi.Models.Producto>
 @{
     ViewData["Title"] = "Consolas PLAYSTATION";
 }
@@ -7,58 +8,24 @@
   <main class="mainDestacados">
       <div class="containerProdutos mt-5">
         <div class="row">
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\PS1.png" alt="PS1" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">PlayStation 1</h3>
-                <span class="produto__price">S/ 150.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="96"
+                       src="@item.ImageName" alt="@item.ImageName"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                  <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
+                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\PS2.png" alt="PS2" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">PlayStation 2</h3>
-                <span class="produto__price">S/ 300.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\PS3.png" alt="PS3" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">PlayStation 3</h3>
-                <span class="produto__price">S/ 550.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="produto">
-              <img src="\Images\PS4.png" alt="PS4" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">PlayStation 4</h3>
-                <span class="produto__price">S/ 850.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="produto"> 
-              <img src="\Images\PS5.png" alt="PS5" class="produto__img" width="200px">
-              <div class="productDescription">
-                <h3 class="produto__title">PlayStation 5</h3>
-                <span class="produto__price">S/ 3500.00</span>
-                <br><button class="btn btn-primary"> Añadir a carrito</button>
-              </div>
-            </div>
-          </div>
+            }
         </div>
       </div>      
   </main>

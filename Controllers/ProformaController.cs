@@ -49,5 +49,33 @@ namespace ControlWavi.Controllers
             return View(model);
         }
 
+         public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var proforma = await _context.DataProforma
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (proforma == null)
+            {
+                return NotFound();
+            }
+
+            return View(proforma);
+        }
+
+        // POST: Proforma/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var proforma = await _context.DataProforma.FindAsync(id);
+            _context.DataProforma.Remove(proforma);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
