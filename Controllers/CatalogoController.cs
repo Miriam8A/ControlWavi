@@ -39,7 +39,6 @@ namespace ControlWavi.Controllers
        public async Task<IActionResult> Consolas_Nintendo()
         {
             return View(await _context.DataProductos.ToListAsync());
-            
         }
           public async Task<IActionResult> Consolas_PlayStation()
         {
