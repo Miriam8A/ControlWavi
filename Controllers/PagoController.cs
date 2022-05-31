@@ -65,11 +65,10 @@ namespace ControlWavi.Controllers
                 p.Status="PROCESADO";
             }
             _context.UpdateRange(itemsProforma);
-
             _context.SaveChanges();
 
             ViewData["Message"] = "El pago se ha registrado";
             return View("Create");
-            }
+        }
     }
 }
