@@ -4,10 +4,8 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Producto</h4>
+<section class="container px-4 py-5 my-5">
+    <h1 class="display-6 fw-bold text-center">@ViewData["Title"]</h1>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -47,8 +45,8 @@
             @Html.DisplayFor(model => model.Status)
         </dd>
     </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+        <a class="btn btn-dark" asp-action="Index">Volver</a>
+    </div>
+</section>
