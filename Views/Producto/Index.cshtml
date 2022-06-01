@@ -1,18 +1,16 @@
 @model IEnumerable<ControlWavi.Models.Producto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Mantenimiento de Productos";
 }
 
-<section class="px-4 py-5 my-5">
+<section class="container px-4 py-5 my-5">
   <h1 class="display-6 fw-bold text-center">@ViewData["Title"]</h1>
-  <p class="text-center">
-    <a asp-action="Create">Create New</a>
-  </p>
+  <a class="btn btn-dark" asp-action="Create" data-bs-toggle="tooltip" data-bs-placement="top" title="Nuevo producto">Nuevo&nbsp;<i class="bi bi-plus-circle"></i></a>
   <main class="mainDestacados">
       <div class="containerProdutos mt-5">
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.Name)
@@ -57,9 +55,9 @@
                         @Html.DisplayFor(modelItem => item.Status)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="bi bi-pencil-square"></i></a> |
+                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver más"><i class="bi bi-eye"></i></a> |
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar"><i class="bi bi-trash3"></i></a>
                     </td>
                 </tr>
         }
