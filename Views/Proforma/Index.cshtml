@@ -16,6 +16,9 @@
     <table class="table">
         <thead>
             <tr>
+                 <th>
+                IMAGEN
+            </th>
                 <th>
                     @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Producto.Name)
                 </th>
@@ -31,6 +34,14 @@
         <tbody>
     @foreach (Proforma item in Model.elementosCarrito) {
             <tr>
+                 <td >
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <center><img class="img-responsive" width="150" height="200"
+                       src="/images/@item.Producto.ImageName" alt="@item.Producto.ImageName"  /></center>
+                  </div>
+                </div>
+            </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Producto.Name)
                 </td>
