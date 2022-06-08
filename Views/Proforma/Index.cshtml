@@ -8,13 +8,10 @@
     Decimal montoTotal = @Model.montoTotal;
 }
 <section class="px-4 py-5 my-5 ">
-  <h1 class="display-6 fw-bold">@ViewData["Title"]</h1>
+  <h1 class="display-6 fw-bold text-center pb-3">@ViewData["Title"]</h1>
 
-    <a class="btn btn-primary" asp-controller="Pago" 
-            asp-action="Create" asp-route-monto="@montoTotal">Pagar</a><p>Total S/. @montoTotal</p>
-
-    <table class="table">
-        <thead>
+    <table class="table table-bordered table-hover">
+        <thead class="table-primary text-center">
             <tr>
                  <th>
                 IMAGEN
@@ -31,13 +28,13 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="align-middle text-center">
     @foreach (Proforma item in Model.elementosCarrito) {
             <tr>
                  <td >
                 <div class="card-body">
                   <div class="card-img-actions">
-                    <center><img class="img-responsive" width="150" height="200"
+                    <center><img class="img-responsive" width="100"
                        src="/images/@item.Producto.ImageName" alt="@item.Producto.ImageName"  /></center>
                   </div>
                 </div>
@@ -52,11 +49,15 @@
                     @Html.DisplayFor(modelItem => item.Precio)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <!--<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> -->
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3"></i></a>
                 </td>
             </tr>
     }
         </tbody>
     </table>
+    <div class="text-end">
+        <h2>Total <strong>S/. @montoTotal</strong></h2>
+        <a class="btn btn-primary" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal">Pagar</a>
+    </div>
 </section>   
