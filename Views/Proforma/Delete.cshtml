@@ -1,27 +1,25 @@
 @model ControlWavi.Models.Proforma
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Elminar producto";
 }
-
-<h1>Delete</h1>
-
-<h3>Seguro que quieres eliminar esto?</h3>
-<div>
-    <h4>Producto</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Producto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Producto)
-        </dd>
-    </dl>
-
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">eliminar</a>
-    </form>
-</div>
+<section class="px-4 py-5 my-5 text-center">
+  <h1 class="display-6 fw-bold pb-3">@ViewData["Title"]</h1>
+  <h3>¿Seguro que quieres eliminar esto?</h3>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Producto)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Producto)
+            </dd>
+        </dl>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a class="btn btn-dark" asp-action="Index">Cancelar</a>
+        </form>
+    </div>
+</section>
