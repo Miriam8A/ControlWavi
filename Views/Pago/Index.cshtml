@@ -1,0 +1,47 @@
+@model IEnumerable<ControlWavi.Models.Pago>
+
+@{
+    ViewData["Title"] = "Pagos Recibidos";
+}
+
+<section class="container px-4 py-5 my-5">
+  <h1 class="display-6 fw-bold text-center">@ViewData["Title"]</h1>
+  <main class="mainDestacados">
+      <div class="containerProdutos mt-5">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NombreTarjeta)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MontoTotal)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PaymentDate)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreTarjeta)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MontoTotal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaymentDate)
+                    </td>
+                    <td>
+                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver más"><i class="bi bi-eye"></i></a> 
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>   
+  </main>
+</section>     

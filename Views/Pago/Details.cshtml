@@ -1,0 +1,39 @@
+@model ControlWavi.Models.Pago
+
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<section class="container px-4 py-5 my-5">
+    <h1 class="display-6 fw-bold text-center">@ViewData["Title"]</h1>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreTarjeta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreTarjeta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MontoTotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MontoTotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+    </dl>
+    <div>
+        <a class="btn btn-dark" asp-action="Index">Volver</a>
+    </div>
+</section>
