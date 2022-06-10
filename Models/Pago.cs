@@ -12,7 +12,7 @@ namespace ControlWavi.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int Id { get; set; }
-        public DateTime PaymentDate { get; set; }
+        public String PaymentDate { get; set; }
         public String NombreTarjeta { get; set; }
 
         public String NumeroTarjeta { get; set; }
