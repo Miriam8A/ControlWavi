@@ -21,7 +21,12 @@ namespace ControlWavi.Controllers
             _context = context;
             _userManager = userManager;
         }
-
+        // GET: Pago
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.DataPago.ToListAsync());
+        }
+        
         public IActionResult Create(Decimal monto)
         {
             Pago pago = new Pago();
@@ -29,11 +34,28 @@ namespace ControlWavi.Controllers
             pago.MontoTotal = monto;
             return View(pago);
         }
+        // GET: Pago/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var pago = await _context.DataPago
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (pago == null)
+            {
+                return NotFound();
+            }
+
+            return View(pago);
+        }
 
         [HttpPost]
         public IActionResult Pagar(Pago pago)
         {
-            pago.PaymentDate = DateTime.UtcNow;
+            pago.PaymentDate = DateTime.UtcNow.ToString();
             _context.Add(pago);
 
             var itemsProforma = from o in _context.DataProforma select o;
