@@ -1,6 +1,6 @@
 @model IEnumerable<ControlWavi.Models.Producto>
 @{
-    ViewData["Title"] = "Consolas NINTENDO";
+    ViewData["Title"] = "Consolas XBOX";
 }
 <section class="px-4 py-5 my-5 text-center">
   <h1 class="display-6 fw-bold">@ViewData["Title"]</h1>
@@ -19,8 +19,8 @@
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                   <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Agregar</a>
-                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Ver</a>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
+                  <a class="btn btn-info2" asp-action="Details" asp-route-id="@item.Id">View</a>
                 </div>
               </div>
             </div>
