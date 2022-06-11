@@ -35,22 +35,30 @@ namespace ControlWavi.Controllers
         {
             return View();
         }
-
+        
        public async Task<IActionResult> Consolas_Nintendo()
         {
-            return View(await _context.DataProductos.ToListAsync());
+            var consolas = from o in _context.DataProductos select o;
+            consolas = consolas.Where(s => s.Descripcion.Contains("Nintendo"));            
+            return View(await consolas.ToListAsync());
         }
           public async Task<IActionResult> Consolas_PlayStation()
         {
-            return View(await _context.DataProductos.ToListAsync());
+            var consolas = from o in _context.DataProductos select o;
+            consolas = consolas.Where(s => s.Descripcion.Contains("PlayStation"));            
+            return View(await consolas.ToListAsync());
         }
           public async Task<IActionResult> Consolas_Sega()
         {
-            return View(await _context.DataProductos.ToListAsync());
+            var consolas = from o in _context.DataProductos select o;
+            consolas = consolas.Where(s => s.Descripcion.Contains("Sega"));            
+            return View(await consolas.ToListAsync());
         }
           public async Task<IActionResult> Consolas_Xbox()
         {
-            return View(await _context.DataProductos.ToListAsync());
+            var consolas = from o in _context.DataProductos select o;
+            consolas = consolas.Where(s => s.Descripcion.Contains("Xbox"));            
+            return View(await consolas.ToListAsync());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
