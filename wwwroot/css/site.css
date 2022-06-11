@@ -34,7 +34,18 @@ html {
     font-size: 16px;
   }
 }
-
+.text-nav{
+  background-color: #fbcf15;
+  margin: 5px;
+  color: #e52017;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+#navPr{
+  background-image: url("../Images/Fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
