@@ -1,40 +1,87 @@
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ControlWavi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<style>
+  .carousel-item img{
+    height: 75vh;
+    margin: auto;
+  }
+  .text-nav{
+    background-color: #fbcf15;
+    color: #e52017;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 8px;
+  }
+  #myCarousel{
+    background-color: #131720;
+  }
+  .btn-info2{
+    --bs-btn-color: #000;
+    --bs-btn-bg: #fbcf15;
+    --bs-btn-border-color: #fbcf15;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #efc513;
+    --bs-btn-hover-border-color: #efc513;
+    --bs-btn-focus-shadow-rgb: 11,172,204;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #fbcf15;
+    --bs-btn-active-border-color: #fbcf15;
+    --bs-btn-active-shadow: inset 0 3px 5pxrgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #fbcf15;
+    --bs-btn-disabled-border-color: #fbcf15;
+    }
+</style>
+<body>
+    <header class="sticky-top">
+        <nav id="navPr" class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="img-responsive" width="170" src="../../imagen/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link text-nav" asp-area="" asp-controller="Home" asp-action="Privacy">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nav" asp-area="" asp-controller="Catalogo" asp-action="Index_catalogo">Catálogo</a>
+                    </li>                                                 
+                    <li class="nav-item">
+                        <a class="nav-link text-nav" asp-area="" asp-controller="Contacto" asp-action="Index">Contáctenos</a>
+                    </li>
+                    <partial name="_MenuPartial" />
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+        </nav>
 
-<ul class="navbar-nav">
-        <li class="nav-item">
-            <form class="d-flex" asp-controller="Catalogo" asp-action="Index">
-                <div class="input-group nav-search">
-                    <input type="text" class="form-control" name="searchString" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" name="searchString" type="submit"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </form>
-        </li>
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a class="nav-link text-nav" href="../Proforma" ><i class="bi bi-cart4"></i></a>
-    </li>
+    </header>
+    <div class="">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white" style="background-color: #131720;position: absolute;width: 100%;bottom: 0;">
+        © 2022 - ControlWavi - <a class="text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
     
-    <li class="nav-item">
-        <a  class="nav-link text-nav" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-nav" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-nav" asp-area="Identity" asp-page="/Account/Login" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login"><i class="bi bi-person-circle"></i></a>
-    </li>
-}
-</ul>
+    <!-- Copyright -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
