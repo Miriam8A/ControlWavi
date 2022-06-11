@@ -1,0 +1,31 @@
+@model IEnumerable<ControlWavi.Models.Producto>
+@{
+    ViewData["Title"] = "Consolas";
+}
+<section class="px-4 py-5 my-5 text-center">
+  <h1 class="display-6 fw-bold">@ViewData["Title"]</h1>
+  <main class="mainDestacados">
+      <div class="containerProdutos mt-5">
+        <div class="row">
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="170"
+                       src="../Images/@item.ImageName" alt="@item.ImageName"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                  <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Agregar</a>
+                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Ver</a>
+                </div>
+              </div>
+            </div>
+            }
+        </div>
+      </div>      
+  </main>
+</section>
